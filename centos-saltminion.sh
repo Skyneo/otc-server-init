@@ -1,9 +1,8 @@
 #!/bin/bash -x
 echo "*** Installing SaltStack ***"
-wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
-add-apt-repository "deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/2017.7 xenial main"
-apt-get update
-apt-get -y install salt-minion
+yum install https://repo.saltstack.com/yum/redhat/salt-repo-latest-2.el7.noarch.rpm 
+yum clean expire-cache
+yum install salt-minion
 
 if [ -n "$2" ]; then
     env = $2

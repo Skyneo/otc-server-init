@@ -9,7 +9,8 @@ Use:
 ./datadisk.sh SIZE  
 ./ubuntu-python.sh  
 ./ubuntu-docker.sh  
-./ubuntu-saltminion.sh MASTER  
+./ubuntu-saltminion.sh MASTER SALTENV  
 
 ### CentOS
 ./datadisk.sh SIZE  
+./centos-saltminion.sh MASTER SALTENV  
