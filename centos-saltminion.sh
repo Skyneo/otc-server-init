@@ -4,10 +4,10 @@ yum install https://repo.saltstack.com/yum/redhat/salt-repo-latest-2.el7.noarch.
 yum clean expire-cache
 yum install salt-minion
 
-if [ -n "$2" ]; then
-    env = $2
+if [ -z "$2" ]; then
+env="base"
 else
-    env = "base"
+env=$2
 fi
 
 set -x

@@ -5,10 +5,10 @@ add-apt-repository "deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/2017.7 
 apt-get update
 apt-get -y install salt-minion
 
-if [ -n "$2" ]; then
-    env = $2
+if [ -z "$2" ]; then
+env="base"
 else
-    env = "base"
+env=$2
 fi
 
 set -x
